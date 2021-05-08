@@ -1,0 +1,21 @@
+{
+    "name": "com.smaleck.utilities-general",
+    "version": "1.0.0",
+    "displayName": "Utilities General",
+    "description": "Collection of general purpose utility classes",
+    "unity": "2019.1",
+    "unityRelease": "0b5",
+    "dependencies": {
+        "com.unity.test-framework": "^1.1.24"
+    },
+    "keywords": [
+        "utility",
+        "collections",
+        "enum"
+    ],
+    "author": {
+        "name": "Sebastian Maleck",
+        "email": "s.maleck@live.de",
+        "url": "https://github.com/SMaleck/unity-utility-general"
+    }
+}
