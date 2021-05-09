@@ -1,3 +1,5 @@
+using UnityEngine;
+
 namespace UtilitiesGeneral.Extensions
 {
     public static class NumberExtensions
@@ -28,29 +30,51 @@ namespace UtilitiesGeneral.Extensions
             return value % 2 == 1;
         }
 
-        public static double AsPercentage(this double value)
+        /// <summary>
+        /// Returns the representation of this float in percentage relative to the max value given.
+        /// </summary>
+        public static int ToPercentageOf(this float value, float max)
+        {
+            return (int)((value / max) * 100);
+        }
+
+        public static double ToPercentage(this double value)
         {
             return value * 100;
         }
 
-        public static double AsNegativePercentage(this double value)
+        public static double ToNegativePercentage(this double value)
         {
             return (1 - value) * 100;
         }
 
-        public static double AsAdditivePercentage(this double value)
+        public static double ToAdditivePercentage(this double value)
         {
             return (value - 1) * 100;
         }
-
-        public static float ToRelativeProgress(float value, float max)
+        
+        /// <summary>
+        /// Returns the representation of this float in relative percentage relative to the max value given (between 0 and 1)
+        /// </summary>
+        public static float ToRelativeTo(this float value, float max)
         {
-            return value / max;
+            return (value / max);
         }
 
-        public static double ToRelativeProgress(double value, double max)
+        /// <summary>
+        /// Returns the representation of this float in relative percentage relative to the max value given (between 0 and 1)
+        /// </summary>
+        public static double ToRelativeTo(this double value, double max)
         {
-            return value / max;
+            return (value / max);
+        }
+
+        /// <summary>
+        /// Returns value * Time.deltaTime
+        /// </summary>
+        public static float ToTimeAdjusted(this float value)
+        {
+            return value * Time.deltaTime;
         }
     }
 }
