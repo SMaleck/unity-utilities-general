@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using NUnit.Framework;
-using UtilitiesGeneral.Collections;
+using UtilitiesGeneral.Extensions;
 
 namespace UtilitiesGeneral.Tests.Collections
 {
