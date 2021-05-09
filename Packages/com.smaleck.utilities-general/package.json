@@ -1,8 +1,8 @@
 {
     "name": "com.smaleck.utilities-general",
     "version": "1.0.0",
-    "displayName": "Utilities General",
-    "description": "Collection of general purpose utility classes",
+    "displayName": "UtilitiesGeneral",
+    "description": "Collection of general purpose utilities and extensions.",
     "unity": "2019.1",
     "unityRelease": "0b5",
     "dependencies": {
