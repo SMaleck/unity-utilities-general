@@ -3,13 +3,19 @@ using System.Linq;
 using NUnit.Framework;
 using UtilitiesGeneral.Extensions;
 
-namespace UtilitiesGeneral.Tests.Collections
+namespace UtilitiesGeneral.Tests.Extensions
 {
     public class CollectionExtensionsTests
     {
         private class TestDataClass
         {
             public int Value;
+        }
+
+        private class TestDataClassB
+        {
+            public int ValueA;
+            public int ValueB;
         }
 
         [Test]
@@ -68,6 +74,27 @@ namespace UtilitiesGeneral.Tests.Collections
             {
                 Assert.AreEqual(e, data[i]);
             });
+        }
+
+        [Test]
+        public void DistinctBy()
+        {
+            var data = new TestDataClassB[]
+            {
+                new TestDataClassB{ValueA = 0, ValueB = 0},
+                new TestDataClassB{ValueA = 1, ValueB = 1},
+                new TestDataClassB{ValueA = 2, ValueB = 1},
+                new TestDataClassB{ValueA = 3, ValueB = 2}
+            };
+
+            var result = data
+                .DistinctBy(e => e.ValueB)
+                .ToArray();
+
+            Assert.AreEqual(3, result.Length);
+            Assert.AreEqual(0, result[0].ValueB);
+            Assert.AreEqual(1, result[1].ValueB);
+            Assert.AreEqual(2, result[2].ValueB);
         }
 
         private TestDataClass[] CreateTestData()

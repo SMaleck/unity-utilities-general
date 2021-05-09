@@ -1,7 +1,7 @@
 using NUnit.Framework;
 using UtilitiesGeneral.Extensions;
 
-namespace UtilitiesGeneral.Tests.Collections
+namespace UtilitiesGeneral.Tests.Extensions
 {
     public class EnumExtensionsTests
     {

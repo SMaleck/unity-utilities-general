@@ -6,6 +6,9 @@ namespace UtilitiesGeneral.Extensions
 {
     public static class CollectionExtensions
     {
+        /// <summary>
+        /// Adds a key-value pair to a Dictionary or replaces an existing key's value
+        /// </summary>
         public static void AddOrReplace<TKey, TValue>(this IDictionary<TKey, TValue> dict, TKey key, TValue value)
         {
             if (dict.ContainsKey(key))
@@ -22,16 +25,19 @@ namespace UtilitiesGeneral.Extensions
         {
             foreach (var item in enumerable)
             {
-                action(item);
+                action.Invoke(item);
             }
         }
 
+        /// <summary>
+        /// Performs an action on each of a given enumerable's elements and passes the current index
+        /// </summary>
         public static void For<T>(this IEnumerable<T> enumerable, Action<T, int> action)
         {
             var count = enumerable.Count();
             for (var i = 0; i < count; i++)
             {
-                action(enumerable.ElementAt(i), i);
+                action.Invoke(enumerable.ElementAt(i), i);
             }
         }
 

@@ -27,17 +27,20 @@ namespace UtilitiesGeneral.Extensions
 
         public static bool IsOdd(this int value)
         {
-            return value % 2 == 1;
+            return value % 2 != 0;
         }
 
         /// <summary>
-        /// Returns the representation of this float in percentage relative to the max value given.
+        /// Expresses the relation between a value and a max as a percentage. E.g. 100 / 200 -> 50%
         /// </summary>
-        public static int ToPercentageOf(this float value, float max)
+        public static double ToPercentageOf(this double value, double max)
         {
-            return (int)((value / max) * 100);
+            return (value / max) * 100;
         }
 
+        /// <summary>
+        /// Expresses a factor as an percentage. E.g. 0.5d -> 50%
+        /// </summary>
         public static double ToPercentage(this double value)
         {
             return value * 100;
