@@ -2,6 +2,8 @@
 A collection of general purpose extensions and utility classes.
 
 ## Quick Start
+> See the releases or the [CHANGELOG](./Packages/com.smaleck.utilities-general/CHANGELOG.md) for the current version.
+
 To use this package in your Unity project, you have to manually add it to you `manifest.json`.
 
 1. Go to `YourProject/Packages/`
@@ -12,7 +14,7 @@ To use this package in your Unity project, you have to manually add it to you `m
 ```json
 {
   "dependencies": {
-    "com.smaleck.utilities-general": "git://github.com/SMaleck/unity-utilities-general.git?path=/Packages/com.smaleck.utilities-general"
+    "com.smaleck.utilities-general": "git://github.com/SMaleck/unity-utilities-general.git?path=/Packages/com.smaleck.utilities-general#v1.0.0"
   }
 }
 ```
