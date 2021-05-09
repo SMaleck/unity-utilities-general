@@ -1,8 +1,9 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using UtilitiesGeneral.Extensions;
 
-namespace UtilitiesGeneral.Extensions
+namespace UtilitiesGeneral.Utilities
 {
     public static class EnumIterator<T> where T : Enum
     {
