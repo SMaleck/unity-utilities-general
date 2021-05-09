@@ -42,5 +42,15 @@ namespace UtilitiesGeneral.Extensions
         {
             return (value - 1) * 100;
         }
+
+        public static float ToRelativeProgress(float value, float max)
+        {
+            return value / max;
+        }
+
+        public static double ToRelativeProgress(double value, double max)
+        {
+            return value / max;
+        }
     }
 }

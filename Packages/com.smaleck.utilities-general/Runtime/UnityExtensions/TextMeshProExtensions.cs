@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace UtilitiesGeneral.Extensions
+namespace UtilitiesGeneral.UnityExtensions
 {
     public static class TextMeshProExtensions
     {

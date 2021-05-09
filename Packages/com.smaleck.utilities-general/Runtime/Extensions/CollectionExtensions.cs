@@ -34,5 +34,34 @@ namespace UtilitiesGeneral.Extensions
                 action(enumerable.ElementAt(i), i);
             }
         }
+
+        public static IEnumerable<TSource> DistinctBy<TSource, TKey>
+            (this IEnumerable<TSource> source, Func<TSource, TKey> keySelector)
+        {
+            var seenKeys = new HashSet<TKey>();
+            foreach (var element in source)
+            {
+                if (seenKeys.Add(keySelector(element)))
+                {
+                    yield return element;
+                }
+            }
+        }
+
+        public static int IndexOf<T>(this IEnumerable<T> enumerable, T value)
+        {
+            return enumerable.IndexOf(value, null);
+        }
+
+        public static int IndexOf<T>(this IEnumerable<T> enumerable, T value, IEqualityComparer<T> comparer)
+        {
+            comparer = comparer ?? EqualityComparer<T>.Default;
+
+            var found = enumerable
+                .Select((a, i) => new { a, i })
+                .FirstOrDefault(x => comparer.Equals(x.a, value));
+
+            return found?.i ?? -1;
+        }
     }
 }
