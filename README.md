@@ -14,7 +14,7 @@ To use this package in your Unity project, you have to manually add it to you `m
 ```json
 {
   "dependencies": {
-    "com.smaleck.utilities-general": "git://github.com/SMaleck/unity-utilities-general.git#v1.0.0"
+    "com.smaleck.utilities-general": "git://github.com/SMaleck/unity-utilities-general.git#v1.0.1"
   }
 }
 ```
